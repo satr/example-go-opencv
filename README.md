@@ -1,6 +1,6 @@
 # example-go-opencv
-### Instal [OpenCV on Ubuntu](https://docs.opencv.org/master/d2/de6/tutorial_py_setup_in_ubuntu.html)
-Prerequisites
+## Install [OpenCV on Ubuntu](https://docs.opencv.org/master/d2/de6/tutorial_py_setup_in_ubuntu.html)
+### Install prerequisites
 ```
 sudo apt-get install cmake gcc g++
 sudo apt-get install cmake gcc g++ python3-dev python3-numpy 
@@ -8,12 +8,12 @@ sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libgstreamer-
 sudo apt-get install libgtk-3-dev
 sudo apt-get install libpng-dev libjpeg-dev libopenexr-dev libtiff-dev libwebp-dev
 ```
-Get OpenCV sources
+### Get OpenCV sources
 ```
 git clone https://github.com/opencv/opencv.git
 ```
 
-Build OpenCV
+### Build OpenCV
 ```
 cd opencv
 mkdir build && cd build
@@ -33,7 +33,8 @@ It generates and installs a file `opencv4.pc` in `/usr/local/lib/pkgconfig/openc
 ```
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig/opencv4.pc
 ```
-On error like this
+
+### On error finding shared libraries
 ```
 error while loading shared libraries: libopencv_dnn.so.4.5: cannot open shared object file: No such file or directory
 ```
@@ -47,7 +48,14 @@ sudo ldconfig
 ```
 Some (details)[https://medium.com/@meghamohan/everything-you-need-to-know-about-libraries-in-c-e8ad6138cbb4] about C-libraries.
 
-Source the updated `.bashrc` file
+### Source the updated `.bashrc` file
 ```
 source ~/.bashrc
 ```
+
+### Run the example
+```
+go run main.go
+```
+
+More details about using [Go with OpenCV](https://gocv.io/)
