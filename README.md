@@ -46,7 +46,7 @@ With fixed `LD_LIBRARY_PATH` go-application can be run with command `go run main
 ```
 sudo ldconfig
 ```
-Some (details)[https://medium.com/@meghamohan/everything-you-need-to-know-about-libraries-in-c-e8ad6138cbb4] about C-libraries.
+Some [details](https://medium.com/@meghamohan/everything-you-need-to-know-about-libraries-in-c-e8ad6138cbb4) about C-libraries.
 
 ### Source the updated `.bashrc` file
 ```
