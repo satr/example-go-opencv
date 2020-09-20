@@ -36,6 +36,14 @@ Add following line to the `.bashrc`
 ```
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig/opencv4.pc
 ```
+On error like
+```
+error while loading shared libraries: libopencv_dnn.so.4.5: cannot open shared object file: No such file or directory
+```
+Try to find it with a command `sudo find / -name "libopencv_dnn.so.4.5"` and add the path to the found lib to `LD_LIBRARY_PATH` to the `.bashrc`
+```
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+```
 Source the updated rc-file
 ```
 source ~/.bashrc
