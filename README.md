@@ -44,6 +44,12 @@ Try to find it with a command `sudo find / -name "libopencv_dnn.so.4.5"` and add
 ```
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 ```
+With fixed `LD_LIBRARY_PATH` go-application can be run with command `go run main.go`, but to run it with JetBrains GoLand - update system cache 
+```
+sudo ldconfig
+```
+Some (details)[https://medium.com/@meghamohan/everything-you-need-to-know-about-libraries-in-c-e8ad6138cbb4] about libraries.
+
 Source the updated rc-file
 ```
 source ~/.bashrc
